@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{settings}
+%to write english paragraph \selectlanguage{language}
+%to write english inline \textenglish{...}
+
+\title{spring2018A}
+\author{דורון שפיגל}
+\date{02.04.24}
+
+\begin{document}
+
+\maketitle
+\begin{Question}
+בחומר מסוים נתונה הדיספרסיה של פס ההולכה:
+\begin{equation*}
+    \epsilon_{c}(k)= \epsilon_{0}+\frac{\hbar^2}{2}\left[ \left( \frac{k_{x}^4}{\alpha}-k_{x}^2 \right)\frac{1}{m_{1}}+\left( \frac{k_{y}^4}{\alpha}-k_{y}^2 \right)\frac{1}{m_{1}} + \frac{k_{z}^2}{m_{e}} \right]
+\end{equation*}
+נתון: $m_{1}=3m_{e}$, $\frac{\hbar^2\alpha}{2m_{1}}=1eV$ ו- $\epsilon_{0}=1eV$ והוא נמדד מהמקסימום של פס הערכיות הנמצא במרכז אזור ברילואין הראשון באנרגיה $\epsilon_{V}=0$.
+\end{Question}
+\begin{Answer}
+תחילה אציב את הנתון $m_{1}=3m_{e}$ בנוסחה ואקבל:
+\begin{align*}
+        \epsilon_{c}(k)= \epsilon_{0}+\frac{\hbar^2}{2}\left[ \left( \frac{k_{x}^4}{\alpha}-k_{x}^2 \right)\frac{1}{3m_{e}}+\left( \frac{k_{y}^4}{\alpha}-k_{y}^2 \right)\frac{1}{3m_{e}} + \frac{k_{z}^2}{m_{e}} \right]\\
+        \epsilon_{c}(k)= \epsilon_{0}+\frac{\hbar^2}{2m_{e}}\left[ \left( \frac{k_{x}^4}{\alpha}-k_{x}^2 \right)\frac{1}{3}+\left( \frac{k_{y}^4}{\alpha}-k_{y}^2 \right)\frac{1}{3} + k_{z}^2\right]
+\end{align*}
+נחשב את הגרדיאנט של הפונקציה ונמצא את הנקודות בהן היא מתאפסת:
+\begin{align*}
+    \nabla \epsilon_{c}(k)= \frac{\hbar^2}{2m_{e}}\left[ \left( \frac{4k_{x}^3}{\alpha}-2k_{x} \right)\frac{1}{3}+\left( \frac{4k_{y}^3}{\alpha}-2k_{y} \right)\frac{1}{3} + 2k_{z}\right]=0
+\end{align*}
+פתרון טריוויאלי הוא $k_{x}=k_{y}=k_{z}=0$. נבדוק את הנקודה הזו:
+\begin{align*}
+    \epsilon_{c}(0)= \epsilon_{0}+\frac{\hbar^2}{2m_{e}}\left[ 0+0+0\right]=\epsilon_{0}
+\end{align*}
+נחפש נקודות התאפסות על ידי השוואת מקדמים:
+\begin{align*}
+    \frac{4k_{x}^3}{\alpha}-2k_{x} = 0 \Rightarrow  k_{x}^2=\frac{\alpha}{2} &\Rightarrow k_{x}=\pm\sqrt{\frac{\alpha}{2}}\\
+    \frac{4k_{y}^3}{\alpha}-2k_{y} = 0 \Rightarrow  k_{y}^2=\frac{\alpha}{2} &\Rightarrow k_{y}=\pm\sqrt{\frac{\alpha}{2}}\\
+    2k_{z} = 0 &\Rightarrow k_{z}=0
+\end{align*}
+ולכן נקודות ההתאפסות של הגרדיאנט הן: ${\left\{ \vec{k}=\left( x,y,0 \right)\vert x,y = 0,\pm\sqrt{\frac{\alpha}{2}} \right\}}$.\\ עבור וקטורים מהצורות הבאות יש שיוויו מסימטריות משוואת הנפיצה בציר ה ${x,y}$. כך ש- 
+\begin{align*}
+    {\epsilon(\vec{k})=\epsilon((0,y,0))=\epsilon((x,0,0))}&= \epsilon_{0}+\frac{\hbar^2}{2m_{e}}\left[ \left( \frac{x^4}{\alpha}-x^2 \right)\frac{1}{3}\right]\\
+    &=\epsilon_{0}+\frac{\hbar^2}{6m_{e}}\left[ \frac{\alpha}{2}^2\cdot\frac{1}{\alpha}-\frac{\alpha}{2} \right]\\
+    &= - \frac{\hbar^{2} \alpha}{24 m_{e}} + \epsilon_{0} \underbrace{<}_{\frac{\hbar^2\alpha}{2m_1}=1>0}\epsilon_{0}\\
+    \epsilon(\vec{k})=\epsilon((x,x,0))&=\epsilon_{0}+\frac{\hbar^2}{6m_{e}}\left[ \frac{\alpha}{2}^2\cdot\frac{1}{\alpha}-\frac{\alpha}{2} +\frac{\alpha}{2}^2\cdot\frac{1}{\alpha}-\frac{\alpha}{2} \right]\\
+    &= - \frac{\hbar^{2} \alpha}{12 m_{e}} + \epsilon_{0} \underbrace{<}_{\frac{\hbar^2\alpha}{2m_1}=1>0}\epsilon_{0}
+\end{align*}
+כלומר:
+\begin{equation*}
+    \underbrace{\epsilon((x,x,0))}_{=- \frac{\hbar^{2} \alpha}{12 m_{e}} + \epsilon_{0}}<\underbrace{\epsilon((x,0,0))}_{=- \frac{\hbar^{2} \alpha}{24 m_{e}} + \epsilon_{0}}<\underbrace{\epsilon((0,0,0))}_{=\epsilon_{0}}
+\end{equation*}
+ולכן נקודות המינימום של פס ההולכה הן: $\vec{k}=\left( \pm\sqrt{\frac{\alpha}{2}},\pm\sqrt{\frac{\alpha}{2}},0 \right)$.\\
+נתון כי $\epsilon_{0}=1eV,\quad \epsilon_{V}=0eV$.
+\begin{align*}
+    E_{gap}&=E_{Cmin}-E_{Vmax}=E_{Cmin}-0=E_{Cmin}\\
+    &=  \frac{-\hbar^{2} \alpha}{12 m_{e}} + \epsilon_{0}=\frac{1}{2}\cdot \frac{-\hbar^{2} \alpha}{2 m_{1}}+\epsilon_{0}=\frac{-1}{2}eV+1eV=0.5eV
+\end{align*}
+נתון כי המקסימום של פס הערכיות נמצא במרכז אזור ברילואין הראשון באנרגיה $\epsilon_{V}=0$.כלומר:
+$E_{Vmax}(\vec{k})=0\leftrightarrow \vec{k}=0$. לעומת זאת, ראינו ש $E_{Cmin}(\vec{k})\leftrightarrow \vec{k}\neq0$, לכן פער האנרגיה אינו ישר.\\ החומר אינו יכול לשמש עבור רכיבים פולטי אור מהסיבה שפוטונים מהווים מעברים כמעט אנכיים, ומכיוון שרק קצוות הפסים מאוכלסים, לא תוכל להתקיים פליטת פוטונים.\\
+כעת נמצא את צפיפות המצבים \underline{בתחתית} פס ההולכה: כיוון שמדובר בתחתית הפס, נרצה לבצע קירוב פרבולי לפס האנרגיה בנקודות המינימום $\vec{k}=\left( \pm\sqrt{\frac{\alpha}{2}},\pm\sqrt{\frac{\alpha}{2}},0 \right)$. לפי משוואת הנפיצה הנתונה, ציר $\hat{z}$ פרבולי לחלוטין: $\left( \frac{\hbar^2}{2m_e}k_{z}^{2} \right)\hat{z}$, ואילו על צירי $\hat{x},\hat{y}$ נצטרך לבצע קירוב טיילור (מסדר שני).
+\label{טור טיילור מסדר 2}
+\begin{align*}
+    \eval{f(x)}_{x=a}&\approx f(a)+f'(a)(x-a)+\frac{f''(a)}{2}(x-a)^2
+    \tag{\textenglish{2nd order taylor for single variable}}\\
+    \eval{f(x,y)}_{x=a,y=b}&\approx f(a,b)\\
+    &+\eval{\od{f(x,y)}{x}}_{x=a,y=b}(x-a)+\eval{\od{f(x,y)}{y}}_{x=a,y=b}(y-b)\\
+    &+\eval{\od[2]{f(x,y)}{x}}_{x=a,y=b}\frac{(x-a)^2}{2}+\eval{\od[2]{f(x,y)}{y}}_{x=a,y=b}\frac{(y-b)^2}{2}\\
+    &+\eval{\od{}{y}\od{f(x,y)}{x}}_{x=a,y=b}(x-a)(y-b)
+    \tag{\textenglish{2nd order taylor for two variables}}
+    %(a,b)+fx(a,b)(x−a)+fy(a,b)(y−b)+fxx(a,b)2(x−a)2+fxy(a,b)(x−a)(y−b)+fyy(a,b)2(y−b)2
+\end{align*}
+אחשב כל גורם של הסכום עבור $f(x,y)=\epsilon_{c}(k_{min})$:
+\begin{align*}
+    \epsilon_{c}(k_{min})&= \epsilon_{0}+\frac{\hbar^2}{2m_{e}}\left[ \left( \frac{k_{x}^4}{\alpha}-k_{x}^2 \right)\frac{1}{3}+\left( \frac{k_{y}^4}{\alpha}-k_{y}^2 \right)\frac{1}{3} + k_{z}^2\right]\\
+    &= \epsilon_{0}-\frac{\hbar^2\alpha}{12m_e}=0.5eV=E_{gap}\\
+    \eval{\od{\epsilon_{c}(k_{min})}{k_{x}}}_{\begin{matrix}
+        a=k_{xmin}\\
+        b=k_{ymin}
+    \end{matrix}}\left( x-k_{xmin} \right)&= 
+    \frac{\hbar^2}{2m_{e}}\left[ \left( \frac{4k_{xmin}^3}{\alpha}-2k_{xmin} \right)\frac{1}{3}\right]\left( x-k_{xmin} \right)=0\\
+    \eval{\od{\epsilon_{c}(k_{min})}{k_{y}}}_{\begin{matrix}
+        a=k_{xmin}\\
+        b=k_{ymin}
+    \end{matrix}}\left( y-k_{ymin} \right)&=0\\
+    \eval{\od[2]{\epsilon_{c}(k_{min})}{k_{x}}}_{\begin{matrix}
+        a=k_{xmin}\\
+        b=k_{ymin}
+    \end{matrix}}\frac{(x-k_{xmin})^2}{2}&=\frac{\hbar^2}{2m_{e}}\left[ \left( \frac{12k_{xmin}^2}{\alpha}-2\right)\frac{1}{3}\right]\frac{(x-k_{xmin})^2}{2}\\
+    &=\frac{\h^2}{2m}\left[ \left( \frac{12k^2}{\alpha}-2\right)\frac{1}{3}\right]\frac{(x-k)^2}{2}
+\end{align*}
+\end{Answer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
