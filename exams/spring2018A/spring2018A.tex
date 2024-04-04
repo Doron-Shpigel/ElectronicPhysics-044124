@@ -71,24 +71,100 @@ $E_{Vmax}(\vec{k})=0\leftrightarrow \vec{k}=0$. לעומת זאת, ראינו ש
 \end{align*}
 אחשב כל גורם של הסכום עבור $f(x,y)=\epsilon_{c}(k_{min})$:
 \begin{align*}
-    \epsilon_{c}(k_{min})&= \epsilon_{0}+\frac{\hbar^2}{2m_{e}}\left[ \left( \frac{k_{x}^4}{\alpha}-k_{x}^2 \right)\frac{1}{3}+\left( \frac{k_{y}^4}{\alpha}-k_{y}^2 \right)\frac{1}{3} + k_{z}^2\right]\\
+    \epsilon_{c}\left(k(x,y,0)\right)&= \epsilon_{0}+\frac{\hbar^2}{2m_{e}}\left[ \left( \frac{k_{x}^4}{\alpha}-k_{x}^2 \right)\frac{1}{3}+\left( \frac{k_{y}^4}{\alpha}-k_{y}^2 \right)\frac{1}{3} + k_{z}^2\right]\\
     &= \epsilon_{0}-\frac{\hbar^2\alpha}{12m_e}=0.5eV=E_{gap}\\
-    \eval{\od{\epsilon_{c}(k_{min})}{k_{x}}}_{\begin{matrix}
+    \eval{\od{\epsilon_{c}\left(k(x,y,0)\right)}{k_{x}}}_{\begin{matrix}
         a=k_{xmin}\\
         b=k_{ymin}
-    \end{matrix}}\left( x-k_{xmin} \right)&= 
-    \frac{\hbar^2}{2m_{e}}\left[ \left( \frac{4k_{xmin}^3}{\alpha}-2k_{xmin} \right)\frac{1}{3}\right]\left( x-k_{xmin} \right)=0\\
-    \eval{\od{\epsilon_{c}(k_{min})}{k_{y}}}_{\begin{matrix}
+    \end{matrix}}\left( k_{x}-k_{xmin} \right)&= 
+    \frac{\hbar^2}{2m_{e}}\left[ \left( \frac{4k_{xmin}^3}{\alpha}-2k_{xmin} \right)\frac{1}{3}\right]\left( k_{x}-k_{xmin} \right)=0\\
+    \eval{\od{\epsilon_{c}\left(k(x,y,0)\right)}{k_{y}}}_{\begin{matrix}
         a=k_{xmin}\\
         b=k_{ymin}
-    \end{matrix}}\left( y-k_{ymin} \right)&=0\\
-    \eval{\od[2]{\epsilon_{c}(k_{min})}{k_{x}}}_{\begin{matrix}
+    \end{matrix}}\left( k_{y}-k_{ymin} \right)&=0\\
+    \eval{\od[2]{\epsilon_{c}\left(k(x,y,0)\right)}{k_{x}}}_{\begin{matrix}
         a=k_{xmin}\\
         b=k_{ymin}
-    \end{matrix}}\frac{(x-k_{xmin})^2}{2}&=\frac{\hbar^2}{2m_{e}}\left[ \left( \frac{12k_{xmin}^2}{\alpha}-2\right)\frac{1}{3}\right]\frac{(x-k_{xmin})^2}{2}\\
-    &=\frac{\h^2}{2m}\left[ \left( \frac{12k^2}{\alpha}-2\right)\frac{1}{3}\right]\frac{(x-k)^2}{2}
+    \end{matrix}}\frac{(k_{x}-k_{xmin})^2}{2}&=\frac{\hbar^2}{2m_{e}}\left[ \left( \frac{12k_{xmin}^2}{\alpha}-2\right)\frac{1}{3}\right]\frac{(k_{x}-k_{xmin})^2}{2}\\
+    &=\frac{\hbar^{2}}{12m_{e}} \left( \frac{12k_{xmin}^2}{\alpha}-2\right)\left( k_{x}-k_{xmin} \right)^{2}\\
+    \left[ k_{xmin}=\sqrt{\frac{\alpha}{2}} \right]\Rightarrow &=\frac{\hbar^{2}}{12m_{e}} \left( \frac{12\cdot\frac{\alpha}{2}}{\alpha}-2\right)\left( k_{x}-\sqrt{\frac{\alpha}{2}} \right)^{2}\\
+    &=\frac{\hbar^{2}}{3m_{e}}\left( k_{x}-\sqrt{\frac{\alpha}{2}} \right)^{2}\\
+    \eval{\od[2]{\epsilon_{c}\left(k(x,y,0)\right)}{k_{y}}}_{\begin{matrix}
+        a=k_{xmin}\\
+        b=k_{ymin}
+    \end{matrix}}\frac{(k_{y}-k_{ymin})^2}{2}&=\frac{\hbar^{2}}{3m_{e}}\left( k_{y}-\sqrt{\frac{\alpha}{2}} \right)^{2}
+\end{align*}
+עבור כל הצירים נקבל בסך הכל:
+\begin{align*}
+    \eval{\epsilon_{c}\left( k(x,y,z) \right)}_{kmin}=E_{gap}+\frac{\hbar^{2}}{3m_{e}}\left( \left( k_{x}-\sqrt{\frac{\alpha}{2}} \right)^{2}+\left( k_{y}-\sqrt{\frac{\alpha}{2}} \right)^{2} \right)+\frac{\hbar^{2}}{2m_{e}}k_{z}^{2}
+\end{align*}
+יחס הנפיצה הוא פרבולי (עד כדי הזזה הזזות בצירים $\hat{x},\hat{y}$), אולם, המסות האפקטיביות בצירים $\hat{x},\hat{y}$ שונות מהמסה האפקטיבית בציר $\hat{z}$, כדי לקבל צפיפות מצבים, נשתמש בקירוב של צפיפות המצבים להולכה:\\
+\underline{שלב 1:} חישוב המסה האפקטיבית לכל ציר:
+\begin{align*}
+    m^{*}=\boxed{\left( \frac{1}{\hbar^{2}} \od[2]{E}{k} \right)^{-1}}\\
+    m_{x}^{*}&=\left( \frac{1}{\hbar^{2}} \od[2]{E}{k_{x}} \right)^{-1}=\left( \frac{1}{\hbar^{2}} \frac{2\hbar^{2}}{3m_{e}} \right)^{-1}=\frac{3m_{e}}{2}=1.5m_{e}\\
+    m_{y}^{*}&=1.5m_{e}\\
+    m_{z}^{*}&=\left( \frac{1}{\hbar^{2}} \od[2]{E}{k_{z}} \right)^{-1}=\left( \frac{1}{\hbar^{2}} \frac{2\hbar^{2}}{2m_{e}} \right)^{-1}=m_{e}
+\end{align*}
+\underline{שלב 2:} הצגת טנזור המסה האפקטיבית:
+\begin{equation*}
+    \frac{1}{m^{*}}=\begin{pmatrix}
+        \frac{1}{m_{x}^{*}} & 0 & 0\\
+        0 & \frac{1}{m_{y}^{*}} & 0\\
+        0 & 0 & \frac{1}{m_{z}^{*}}
+    \end{pmatrix}= \begin{pmatrix}
+        \frac{1}{1.5m_{e}} & 0 & 0\\
+        0 & \frac{1}{1.5m_{e}} & 0\\
+        0 & 0 & \frac{1}{m_{e}}
+    \end{pmatrix}
+\end{equation*}
+\underline{שלב 3:} חישוב הסקלר $m^{*}$:
+\begin{align*}
+    \det{\frac{1}{m^{*}}}&=\begin{vmatrix}
+        \frac{1}{1.5m_{e}} & 0 & 0\\
+        0 & \frac{1}{1.5m_{e}} & 0\\
+        0 & 0 & \frac{1}{m_{e}}
+    \end{vmatrix} = \frac{4}{9 m_{e}^{3}}\\
+    m^{*}&=\frac{9 m_{e}^{3}}{4}=2.25m_{e}^{3}
+\end{align*}
+\underline{שלב 4:} המסה האפקטיבית של צפיפות המצבים:\\
+לפי התרגול, המסה האפקטיבית של צפיפות המצבים היא:
+\begin{equation}\label{המסה האפקטיבית של צפיפות מצבים}
+    g(E)=\frac{m_{DOS}^{\frac{3}{2}}\sqrt{2}}{\pi^{2}\hbar^{3}}\sqrt{E-E_{C}},\quad m_{DOS}=g_{V}^{\frac{2}{3}}\left( m_{1}m_{2}m_{3} \right)^{\frac{1}{3}}
+\end{equation}
+כאשר $m_{1},m_{2},m_{3}$ המסות האפקטיביות לאורך 3 הצירים הראשיים של הבעיה.\\
+$g_{V}$ - פרמטר הניוון המעיד על מספר המשטחים שווי האנרגיה בתוך אזור ברילואן הראשון.\\
+במקרה של תרגיל זה, ראינו כי יש 4 מינימות $\vec{k}=\left( \pm\sqrt{\frac{\alpha}{2}},\pm\sqrt{\frac{\alpha}{2}},0 \right)$, ולכן פרמטר הניוון הוא $g_{V}=4$, ונקבל:
+$$m_{DOS}=4^{\frac{2}{3}}\left( m_{1}m_{2}m_{3} \right)^{\frac{1}{3}}=4^{\frac{2}{3}}\left( m^{*} \right)^{\frac{1}{3}}\approx3.301m_{e}$$
+\underline{שלב 5:} צפיפות נושאי מטען:\\
+מקורס מל"מ, ידוע כי צפיפות נושאי המטען נתונה על ידי:
+\begin{equation}\label{צפיפות נושאי מטען}
+    \underbrace{n}_{\text{צפיפות נושאי מטען}}=\int_{-\infty}^{\infty}\underbrace{g(E)}_{\text{צפיפות מצבים}}\,\cdot\underbrace{f_{FD}{(E)}}_{\text{אכלוס פרמי דיראק}}dE
+\end{equation}
+נניח שהחומר נמצא בטמפרטורה של $T=0[K]$, לכן התפלגות הפרמי דיראק תתנהג כמדרגה: $f_{FD}{(E)}=\begin{cases}
+    1 & E\leq \mu_c=E_{f}\\
+    0 & E>\mu_c=E_{f}
+\end{cases}$. נבחר את אנרגיית הייחוס $E_c=0$ ומתקיים:
+\begin{align*}
+    n&=\int_{-\infty}^{\infty}g(E)\cdot f_{FD}dE=\int_{E_{c}}^{E_{f}}
+    \frac{m_{DOS}^{\frac{3}{2}}\sqrt{2}}{\pi^{2}\hbar^{3}}\sqrt{E-E_{C}}f_{FD}{(E)}dE\\
+    &=\int_{0}^{E_{f}}\frac{m_{DOS}^{\frac{3}{2}}\sqrt{2}}{\pi^{2}\hbar^{3}}\sqrt{E}dE
+    =\frac{m_{DOS}^{\frac{3}{2}}\sqrt{2}}{\pi^{2}\hbar^{3}}\int_{0}^{E_{f}}\sqrt{E}dE\\
+    &=\frac{m_{DOS}^{\frac{3}{2}}\sqrt{2}}{\pi^{2}\hbar^{3}}\left[ \frac{2}{3}E^{\frac{3}{2}} \right]_{0}^{E_{f}}=\frac{2}{3}\frac{m_{DOS}^{\frac{3}{2}}\sqrt{2}}{\pi^{2}\hbar^{3}}E_{f}^{\frac{3}{2}}
+\end{align*}
+בשאלה זאת נתון לנו ש $n=10^{18}cm^{-3} = 10^{24}m^{-3}$, ושואלים מהו ערכו של רמת הפרמי. נציב את $n$ ונפתור את המשוואה:
+\begin{align*}
+    E_{f}&=\left( \frac{3\pi^{2}\hbar^{3}n}{2m_{DOS}^{\frac{3}{2}}\sqrt{2}} \right)^{\frac{2}{3}}\\
+    &=\left( \frac{3\cdot \pi^{2}}{2\sqrt{2}} \right)^{\frac{2}{3}}\frac{\hbar^2}{m_{DOS}}n^{\frac{2}{3}}\\
+    &=4.78\cdot10^{16}\cdot \frac{\hbar^2}{m_{DOS}}\\
+    \begin{cases}
+        \hbar=1.054\cdot 10^{-34}Js\\
+        m_{DOS}=3.301m_{e}=3.301\cdot 9.11\cdot 10^{-31}kg
+    \end{cases}\rightarrow &=4.78\cdot10^{16}\cdot0.037\cdot10^{-37}\\
+    &\boxed{E_{f}=1.7686 \cdot 10^{-22}[J]}
 \end{align*}
 \end{Answer}
+
 
 
 

@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 0 "spring2018A.xdv" "spring2018A.pdf" "spring2018A" 0 -1
-  "spring2018A.xdv" 1712154681 27004 bf50b123af75007b094d1a7ac1285ebc "xelatex"
+["xdvipdfmx"] 1712250812 "spring2018A.xdv" "spring2018A.pdf" "spring2018A" 1712250812 0
+  "spring2018A.xdv" 1712250812 47644 2449e9295123e728cbab6c1e35c0e4d2 "xelatex"
   (generated)
   "spring2018A.pdf"
   (rewritten before read)
-["xelatex"] 1712154680 "/home/doron/Documents/GitHub/ElectronicPhysics-044124/exams/spring2018A/spring2018A.tex" "spring2018A.xdv" "spring2018A" 1712154681 2
-  "/home/doron/Documents/GitHub/ElectronicPhysics-044124/exams/spring2018A/spring2018A.tex" 1712154678 7108 ce33ea07767a5d7ffc8392c856c700ac ""
+["xelatex"] 1712250810 "/home/doron/Documents/GitHub/ElectronicPhysics-044124/exams/spring2018A/spring2018A.tex" "spring2018A.xdv" "spring2018A" 1712250812 0
+  "/home/doron/Documents/GitHub/ElectronicPhysics-044124/exams/spring2018A/spring2018A.tex" 1712250810 12640 ebfbbe6d54f48c1bf9dbff1a3406121f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -312,9 +312,9 @@
   "/usr/local/texlive/2023/texmf-var/web2c/xetex/xelatex.fmt" 1712065152 10842223 05e982fefc788f6f4a30338d739a129d ""
   "/usr/local/texlive/2023/texmf.cnf" 1699878532 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "pythontex-files-spring2018A/spring2018A.pytxmcr" 0 -1 0 ""
-  "spring2018A.aux" 1712154681 604 483a3483f469c8f67ba5d17f4f28bb2f "xelatex"
-  "spring2018A.out" 1712154681 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "spring2018A.tex" 1712154678 7108 ce33ea07767a5d7ffc8392c856c700ac ""
+  "spring2018A.aux" 1712250812 768 52ad5c796642c06b78567549dffbe7b6 "xelatex"
+  "spring2018A.out" 1712250812 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "spring2018A.tex" 1712250810 12640 ebfbbe6d54f48c1bf9dbff1a3406121f ""
   (generated)
   "spring2018A.aux"
   "spring2018A.log"

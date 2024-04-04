@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.2)  3 APR 2024 17:31
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.2)  4 APR 2024 20:13
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1293,17 +1293,15 @@ LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 Package hyperref Info: Link coloring OFF on input line 10.
+ (./spring2018A.out) (./spring2018A.out)
 \@outlinefile=\write6
 \openout6 = `spring2018A.out'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 Package newfloat Info: Trying Plan B...
 Package newfloat Info: `float' package detected.
+
 No file pythontex-files-spring2018A/spring2018A.pytxmcr.
 Run PythonTeX to create it.
 Package newfloat Info: New float `listing' with options `fileext=lopytx' on input line 10.
@@ -1442,33 +1440,11 @@ LaTeX Info: Redefining \rmfamily on input line 71.
 LaTeX Info: Redefining \sffamily on input line 71.
 LaTeX Info: Redefining \ttfamily on input line 71.
  [2]
-/home/doron/Documents/GitHub/ElectronicPhysics-044124/exams/spring2018A/spring2018A.tex:90: Undefined control sequence.
-<argument> \h 
-              ^2
-l.90 \end{align*}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/doron/Documents/GitHub/ElectronicPhysics-044124/exams/spring2018A/spring2018A.tex:90: Undefined control sequence.
-<argument> \h 
-              ^2
-l.90 \end{align*}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (27.52966pt too wide) detected at line 90
+Overfull \hbox (44.18886pt too wide) detected at line 96
 []
  []
 
+[3] [4] [5]
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -1582,31 +1558,21 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
-[3] (./spring2018A.aux)
+ [6] (./spring2018A.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `spring2018A.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `spring2018A.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `spring2018A.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 48520 strings out of 474924
- 1188002 string characters out of 5761467
+ 48539 strings out of 474924
+ 1188563 string characters out of 5761467
  1944186 words of memory out of 5000000
- 69616 multiletter control sequences out of 15000+600000
- 571425 words of font info for 149 fonts, out of 8000000 for 9000
+ 69629 multiletter control sequences out of 15000+600000
+ 571441 words of font info for 151 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,15n,121p,1056b,905s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,15n,121p,1056b,907s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on spring2018A.xdv (3 pages, 27004 bytes).
+Output written on spring2018A.xdv (6 pages, 47644 bytes).

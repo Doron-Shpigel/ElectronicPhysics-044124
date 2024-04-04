@@ -501,6 +501,12 @@ OUTPUT spring2018A.aux
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
+INPUT ./spring2018A.out
+INPUT ./spring2018A.out
+INPUT spring2018A.out
+INPUT spring2018A.out
+INPUT ./spring2018A.out
+INPUT ./spring2018A.out
 OUTPUT spring2018A.out
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
