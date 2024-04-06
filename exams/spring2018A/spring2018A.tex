@@ -164,6 +164,176 @@ $$m_{DOS}=4^{\frac{2}{3}}\left( m_{1}m_{2}m_{3} \right)^{\frac{1}{3}}=4^{\frac{2
     &\boxed{E_{f}=1.7686 \cdot 10^{-22}[J]}
 \end{align*}
 \end{Answer}
+\begin{Question}
+נתונה שרשרת חד ממידית של אטומים בעלי מסה $m$ במרחק $d$ זה מזה. קבוע הכוח (הקפיץ) בין שני אטומים סמוכים משתנה לסירוגין בין הערכים ${\alpha,\,\beta}$.
+\end{Question}
+\begin{Answer}
+קיומם של שני קבועי קפיץ שונים משמעו שישנו תא יחידה כשלהוא כיוון שאנו מחפשים סימטריה כלשהי בשרשרת. נבחר תא יחידה כזה שמקיים סימטריות בשרשרת:\\ 
+\includegraphics[width=\textwidth]{image/Q2image.pdf}
+פוטנציאל האנרגיה של התא, הוא:
+\begin{itemize}
+    \item הפוטנציאל בין שני האטומים: $U=\frac{1}{2}\underbrace{\beta}_{\text{קפיץ}}\underbrace{(v_{n}-u_{n})^{2}}_{\text{המרחק}}$.
+    \item הפוטנציאל בין האטום השמאלי לקבוע הקפיץ: $U=\frac{1}{2}\alpha(u_{n}-v_{n-1})^{2}$.
+    \item הפוטנציאל בין האטום הימני לקבוע הקפיץ: $U=\frac{1}{2}\alpha(u_{n+1}-v_{n})^{2}$.
+\end{itemize}
+כלומר, פוטנציאל האנרגיה של התא הוא:
+\begin{equation*}
+    U=\frac{1}{2}\alpha(u_{n+1}-v_{n})^{2}+\frac{1}{2}\beta(v_{n}-u_{n})^{2}+\frac{1}{2}\alpha(u_{n}-v_{n-1})^{2}
+\end{equation*}
+לכל אטום, נרשום את משוואת הכוח (שהיא נגזרת מהפוטנציאל $F=-\od{U}{x}$):
+\begin{align*}
+    \begin{cases}
+        u_{n}:\underbrace{-}_{\leftarrow}\alpha\left( u_{n}-v_{n-1} \right)\underbrace{+}_{\rightarrow}\beta\left( v_{n}-u_{n} \right)\\
+        v_{n}:\underbrace{-}_{\leftarrow}\beta\left( v_{n}-u_{n} \right)\underbrace{+}_{\rightarrow}\alpha\left( u_{n+1}-v_{n} \right)
+    \end{cases}
+\end{align*}
+נגדיר גל מישורי:
+\begin{align*}
+    \begin{cases}
+        u_{n}=Ae^{iknd - i\omega t}\\
+        v_{n}=Be^{iknd -ikd - i\omega t}
+    \end{cases}
+\end{align*}
+נציב למשוואות הכוח ונקבל:
+\begin{align*}
+    &\left\{\begin{aligned}
+        &-m\omega^{2}Ae^{iknd - i\omega t}&=-\alpha\left( Ae^{iknd - i\omega t}-Be^{ik(n-1)d -ikd - i\omega t} \right)\\&&+\beta\left( Be^{iknd -ikd - i\omega t}-Ae^{iknd - i\omega t} \right)\\
+        &-m\omega^{2}Be^{iknd -ikd - i\omega t} &= -\beta\left( Be^{iknd -ikd - i\omega t}-Ae^{iknd - i\omega t} \right)\\&&+\alpha\left( Ae^{ik(n+1)d - i\omega t}-Be^{iknd -ikd - i\omega t} \right)
+    \end{aligned}\right.\\
+    \xrightarrow[\div e^{iknd - i\omega t}]{\div e^{iknd - i\omega t}}&
+    \begin{cases}
+        -m\omega^{2}A=-\alpha\left( A-Be^{-2ikd} \right)+\beta\left( Be^{-ikd}-A \right)\\
+        -m\omega^{2}Be^{-ikd} = -\beta\left( Be^{-ikd}-A \right)+\alpha\left( Ae^{ikd}-Be^{-ikd} \right)
+    \end{cases}\\
+    \xrightarrow[\div e^{-kd}]{}&
+    \begin{cases}
+        -m\omega^{2}A=-\alpha\left( A-Be^{-2ikd} \right)+\beta\left( Be^{-ikd}-A \right)\\
+        -m\omega^{2}B = -\beta\left( B-Ae^{ikd} \right)+\alpha\left( Ae^{2ikd}-B \right)
+    \end{cases}\\
+    \rightarrow&
+    \begin{cases}
+        A\left( \alpha+\beta-m\omega^2 \right)+B\left( -\alpha e^{-2ikd}-\beta e^{-ikd} \right)=0\\
+        A\left( -\alpha e^{2ikd}-\beta e^{ikd} \right)+B\left( \alpha+\beta-m\omega^2 \right)=0
+    \end{cases}
+\end{align*}
+נקבל את המטריצה האופיינית, ונשווה את הדטרמיננטה שלה לאפס:
+\begin{align*}
+    &\begin{pmatrix}
+        \alpha+\beta-m\omega^2&-\alpha e^{-2ikd}-\beta e^{-ikd}\\
+        -\alpha e^{2ikd}-\beta e^{ikd}&\alpha+\beta-m\omega^2 
+    \end{pmatrix}
+    \begin{pmatrix}
+        A\\
+        B
+    \end{pmatrix}=
+    \begin{pmatrix}
+        0\\
+        0
+    \end{pmatrix}\\
+    &\begin{vmatrix}
+        \alpha+\beta-m\omega^2&-\alpha e^{-2ikd}-\beta e^{-ikd}\\
+        -\alpha e^{2ikd}-\beta e^{ikd}&\alpha+\beta-m\omega^2 
+    \end{vmatrix}\\
+    &=\left( \alpha+\beta-m\omega^2 \right)^{2}-\left( -\alpha e^{-2ikd}-\beta e^{-ikd} \right)\left( -\alpha e^{2ikd}-\beta e^{ikd} \right)\\
+    &= \left( \alpha+\beta-m\omega^2 \right)^{2} - \left( \alpha^2+\alpha\beta e^{-ikd} +\alpha\beta e^{ikd} +\beta^2\right)
+\end{align*}
+ניזכר בזהות אויילר לקוסינוס:
+$$\cos(X)=\frac{e^{iX}+e^{-iX}}{2}$$
+כך ש:
+\begin{align*}
+    \left( \alpha^2+\alpha\beta e^{-ikd} +\alpha\beta e^{ikd} +\beta^2\right)=\alpha^{2}+\beta^{2}+2\alpha\beta\cos(kd)
+\end{align*}
+ובפירוק של הגורם השמאלי:
+\begin{align*}
+    \left( \alpha+\beta-m\omega^2 \right)^{2}&= \left( \left[ \alpha+\beta \right]-m\omega^2 \right)^{2}=\left[ \alpha+\beta \right]^{2}-2\left[ \alpha+\beta \right]m\omega^2+m^{2}\omega^{4}\\
+    &=\alpha^{2}+\beta^{2}+2\alpha\beta-2\left[ \alpha+\beta \right]m\omega^2+m^{2}\omega^{4}
+\end{align*}
+ולכן, במשוואת הדטרמיננטה:
+\begin{align*}
+    &\left( \alpha+\beta-m\omega^2 \right)^{2} - \left( \alpha^2+\alpha\beta e^{-ikd} +\alpha\beta e^{ikd} +\beta^2\right)\\
+    &=2\alpha\beta+2\alpha\beta\cos(kd)-2\left[ \alpha+\beta \right]m\omega^2+m^{2}\omega^{4}\\
+    &=2\alpha\beta\left( 1+\cos(kd) \right)-2\left[ \alpha+\beta \right]m\omega^2+m^{2}\omega^{4}\\
+    &=4\alpha\beta\left( \frac{1+\cos(kd)}{2} \right)-2\left[ \alpha+\beta \right]m\omega^2+m^{2}\omega^{4}
+\end{align*}
+ניזכר בזהות $\sin^{2}X=\frac{1-\cos2X}{2}$ כך ש:
+\begin{align*}
+    &4\alpha\beta\left( \frac{1+\cos(kd)}{2} \right)-2\left[ \alpha+\beta \right]m\omega^2+m^{2}\omega^{4}\\&=4\alpha\beta\sin^{2}\left( \frac{kd}{2} \right)-2\left[ \alpha+\beta \right]m\omega^2+m^{2}\omega^{4}\\
+    \xrightarrow{\div m^{2}}&=\omega^{4}-\frac{2\left[ \alpha+\beta \right]}{m}\omega^{2}+\frac{4\alpha\beta}{m^2}\sin^{2}\left( \frac{kd}{2} \right)=0\\
+    \xrightarrow{\omega^{2}=w}&w^{2}-\frac{2\left[ \alpha+\beta \right]}{m}w+\frac{4\alpha\beta}{m^2}\sin^{2}\left( \frac{kd}{2} \right)=0\\
+    w_{1,2}&=\frac{\alpha+\beta}{m} \pm \frac{1}{2}\sqrt{\frac{4}{m^2}\left[ \alpha+\beta \right]^{2}-\frac{16\alpha\beta}{m^2}\sin^{2}\left( \frac{kd}{2} \right)}\\
+    w_{1,2}&=\frac{\alpha+\beta}{m} \pm \frac{1}{2}\sqrt{\frac{4}{m^2}\left(\left[ \alpha+\beta \right]^{2}-4\alpha\beta\sin^{2}\left( \frac{kd}{2} \right) \right)}\\
+    w_{1,2}&=\frac{\alpha+\beta}{m} \pm \frac{1}{m}\sqrt{\left[ \alpha+\beta \right]^{2}-4\alpha\beta\sin^{2}\left( \frac{kd}{2} \right) }\\
+    \xRightarrow{\omega=\abs{\sqrt{w^{2}}}}&\omega_{1,2}=\abs{\sqrt{\frac{\alpha+\beta}{m} \pm \frac{1}{m}\sqrt{\left[ \alpha+\beta \right]^{2}-4\alpha\beta\sin^{2}\left( \frac{kd}{2} \right) }}}
+\end{align*}
+כיוון שהשורש מחזיר מספר חיובי, נקבל שעבור סימן $+$ נקבל תדר גדול יותר, כלומר אופן של גלים אופטיים. עבור סימן $-$ נקבל תדר קטן יותר, כלומר אופן של גלים אקוסטיים.\\
+נתון כעת כי $k=0$, נמצא את הערכים העצמיים והווקטורים העצמיים:
+\begin{align*}
+    \omega_{1,2}\left( k=0 \right)&=\abs{\sqrt{\frac{\alpha+\beta}{m} \pm \frac{1}{m}\sqrt{\left[ \alpha+\beta \right]^{2} }}}=\abs{\sqrt{\frac{\alpha+\beta}{m} \pm \frac{\alpha+\beta}{m} }}\\
+    &\Rightarrow\begin{cases}
+        \omega_1=0&\text{אופן של גלים אקוסטיים}\\
+        \omega_2=\sqrt{\frac{2\left( \alpha+\beta \right)}{m}}&\text{אופן של גלים אופטיים}
+    \end{cases}
+\end{align*}
+נציב את $\omega_1=0,\quad k=0$ במטריצה ונמצא את הווקטור העצמי:
+\begin{align*}
+    &\begin{pmatrix}
+        \alpha+\beta-m\omega^2&-\alpha e^{-2ikd}-\beta e^{-ikd}\\
+        -\alpha e^{2ikd}-\beta e^{ikd}&\alpha+\beta-m\omega^2 
+    \end{pmatrix}
+    \begin{pmatrix}
+        A\\
+        B
+    \end{pmatrix}=
+    \begin{pmatrix}
+        0\\
+        0
+    \end{pmatrix}\\
+    &\begin{pmatrix}
+        \alpha+\beta&-\alpha -\beta\\
+        -\alpha -\beta &\alpha+\beta
+    \end{pmatrix}
+    \begin{pmatrix}
+        A\\
+        B
+    \end{pmatrix}=
+    \begin{pmatrix}
+        0\\
+        0
+    \end{pmatrix}\rightarrow A=B\rightarrow\begin{bmatrix}1\\1\end{bmatrix}\rightarrow\frac{1}{\sqrt{2}}\begin{pmatrix}
+        1\\1
+    \end{pmatrix}
+\end{align*}שתי האמפליטודות זהות סימנן, כלומר כל תא היחידה נע ביחד, דבר המצופה למוד האקוסטי.\\
+נציב $\omega_2=\sqrt{\frac{2\left( \alpha+\beta \right)}{m}}$ במטריצה ונמצא את הווקטור העצמי:
+\begin{align*}
+    &\begin{pmatrix}
+        \alpha+\beta-m\omega^2&-\alpha e^{-2ikd}-\beta e^{-ikd}\\
+        -\alpha e^{2ikd}-\beta e^{ikd}&\alpha+\beta-m\omega^2 
+    \end{pmatrix}
+    \begin{pmatrix}
+        A\\
+        B
+    \end{pmatrix}=
+    \begin{pmatrix}
+        0\\
+        0
+    \end{pmatrix}\\
+    &\begin{pmatrix}
+        -\alpha-\beta&-\alpha -\beta\\
+        -\alpha -\beta &-\alpha-\beta
+    \end{pmatrix}
+    \begin{pmatrix}
+        A\\
+        B
+    \end{pmatrix}=
+    \begin{pmatrix}
+        0\\
+        0
+    \end{pmatrix}\rightarrow A=-B\rightarrow\begin{bmatrix}-1\\1\end{bmatrix}\rightarrow\frac{1}{\sqrt{2}}\begin{pmatrix}
+        -1\\1
+    \end{pmatrix}
+\end{align*}
+שתי האמפליטודות הפוכות בסימנן, דבר המצופה למוד האופטי, הרכיבים של תא היחידה יהיו בעלי כיווני תנועה מנוגדים.
+\end{Answer}
 
 
 

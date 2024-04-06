@@ -572,6 +572,9 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm1
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 OUTPUT spring2018A.xdv
+INPUT ./image/Q2image.pdf
+INPUT ./image/Q2image.pdf
+INPUT ./image/Q2image.pdf
 INPUT spring2018A.aux
 INPUT ./spring2018A.out
 INPUT ./spring2018A.out
