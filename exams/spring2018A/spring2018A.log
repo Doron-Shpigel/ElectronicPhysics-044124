@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.2)  6 APR 2024 22:31
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.4.2)  8 APR 2024 00:11
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1447,7 +1447,27 @@ Overfull \hbox (44.18886pt too wide) detected at line 96
 [3] [4] [5]
 File: image/Q2image.pdf Graphic file (type pdf)
 <use image/Q2image.pdf>
- [6] [7] [8]
+ [6] [7] [8] [9]
+File: image/Q3energy.png Graphic file (type bmp)
+<image/Q3energy.png>
+File: image/Q3HeatCapacity.png Graphic file (type bmp)
+<image/Q3HeatCapacity.png>
+
+Overfull \hbox (2.25006pt too wide) in paragraph at lines 365--379
+[]\TU/FrankRuehlCLM(1)/m/n/10 האמצעית, זאת העלייה הראשונה בגרף, כאשר מגיעים לטמפרטורה מסוימת יש מספיק חום כך שההסתברות[]
+ []
+
+[10] [11]
+Overfull \hbox (2.73611pt too wide) in paragraph at lines 413--414
+[][]\TU/FrankRuehlCLM(1)/m/n/10 הפסים האלקטרונים נובעים ממצבים אטומיים ממוקמים (אורביטלים) בעוד שהפונונים[]
+ []
+
+[12]
+Overfull \hbox (4.7102pt too wide) in paragraph at lines 438--439
+[]\TU/FrankRuehlCLM(1)/m/n/10 טמפרטורה ומצויים במגע תרמי ודיפוסיפי. האם האנטרופיה של המערכת בהכרח מקסימלית? []
+ []
+
+[13]
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -1561,7 +1581,7 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
- [9] (./spring2018A.aux)
+ [14] (./spring2018A.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
@@ -1570,12 +1590,12 @@ Package rerunfilecheck Info: File `spring2018A.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 48559 strings out of 474924
- 1189007 string characters out of 5761467
+ 48597 strings out of 474924
+ 1189941 string characters out of 5761467
  1944186 words of memory out of 5000000
- 69647 multiletter control sequences out of 15000+600000
+ 69682 multiletter control sequences out of 15000+600000
  571441 words of font info for 151 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,21n,121p,1056b,1014s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,21n,121p,1056b,1184s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on spring2018A.xdv (9 pages, 75056 bytes).
+Output written on spring2018A.xdv (14 pages, 142328 bytes).

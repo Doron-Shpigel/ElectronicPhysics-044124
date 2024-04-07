@@ -575,6 +575,12 @@ OUTPUT spring2018A.xdv
 INPUT ./image/Q2image.pdf
 INPUT ./image/Q2image.pdf
 INPUT ./image/Q2image.pdf
+INPUT ./image/Q3energy.png
+INPUT ./image/Q3energy.png
+INPUT ./image/Q3energy.png
+INPUT ./image/Q3HeatCapacity.png
+INPUT ./image/Q3HeatCapacity.png
+INPUT ./image/Q3HeatCapacity.png
 INPUT spring2018A.aux
 INPUT ./spring2018A.out
 INPUT ./spring2018A.out
