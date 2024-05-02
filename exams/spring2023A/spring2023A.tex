@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{settings}
+%to write english paragraph \selectlanguage{language}
+%to write english inline \textenglish{...}
+
+\title{spring2023A}
+\author{דורון שפיגל}
+\date{13.04.24}
+
+\begin{document}
+\maketitle
+
+
+
+\begin{Question}
+נתון חומר תלת מימדי עם יחס נפיצה הדומה לגרפן: $E=\hbar V_{f}\sqrt{k_{x}^{2}+k_{y}^{2}+k_{z}^{2}}$. הספין של האלקטרון בערך מוחלט הוא $\frac{3}{2}$.\\
+מספר המצבים ליחידת אנרגיה וליחידת נפח נפח הוא?
+מספר המצבים עד מספר גל $k$ עבור מערכת באורך $L$ הוא:
+\begin{align}\label{מספר מצבים}
+    N\left( k \right)&=2\cdot\frac{k}{\frac{\pi}{L}}\tag{1d}\\
+    N\left( k \right)&=2\cdot\frac{\pi k^{2}}{4\left( \frac{\pi^2}{L^{2}} \right)}\tag{2d}\\
+    N\left( k \right)&=2\cdot\frac{\frac{1}{8}\cdot\frac{4\pi}{3}k^{3}}{\left( \frac{\pi}{L} \right)^{3}}\tag{3d}
+\end{align}
+נחלץ את $k$:
+\begin{align*}
+    E=\hbar V_{f}\sqrt{k_{x}^{2}+k_{y}^{2}+k_{z}^{2}}=\hbar V_{f}\abs{\vec{k}}\\
+    \abs{\vec{k}}=\frac{E}{\hbar V_{f}}
+\end{align*}
+המערכת תלת מימדית לכן עקום האנרגיה הוא:
+\begin{align*}
+    \sum \left( \epsilon \right)=\frac{4\pi}{3}k^{3}=\frac{4\pi}{3}\frac{\epsilon^{3}}{\left( \hbar V_{f} \right)^{3}}\\
+    V_{system}=L^{3}\\
+    V_{singale-state}=\left( \frac{\pi}{L} \right)^{3}
+\end{align*}
+נוסחה לצפיפות מצבים:
+\begin{equation}
+    g\left( \epsilon \right)=\frac{d}{d\epsilon}\underbracket[0.1ex]{\left[ 
+        \text{\footnotesize{\#degenerate}}\cdot\sum\left( \epsilon \right)\cdot \frac{1}{V_{single-state}\cdot \text{\footnotesize{\#sub-lattice}}}
+        \cdot \underbracket[0.1ex]{2}_{\text{spin}}\cdot \frac{1}{2^{\left\{ d:0,2,3 \right\}}}\cdot
+        \frac{1}{V_{system}}
+    \right]}_{=n}
+\end{equation}
+\begin{align*}
+    n&=\frac{4\pi}{3}\frac{\epsilon^{3}}{\left( \hbar V_{f} \right)^{3}}\cdot \frac{1}{\frac{\pi^{3}}{L^{3}}}\cdot\frac{3}{2}\cdot\frac{1}{8}\cdot\frac{1}{L^{3}}\\
+    \frac{4\pi}{3}\cdot \frac{1}{\frac{\pi^{3}}{L^{3}}}\cdot\frac{1}{8}\cdot\frac{1}{L^{3}}\cdot2 = \frac{2}{3 \pi^{2}}
+    &=\frac{\epsilon^{3}}{\left( \hbar V_{f} \right)^{3}}\frac{1}{4 \pi^{2}}\\
+\end{align*}
+\end{Question}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

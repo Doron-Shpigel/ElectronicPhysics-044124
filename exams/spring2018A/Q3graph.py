@@ -48,3 +48,6 @@ plt.show()
 image_path = os.path.join(image_dir, 'Q3HeatCapacity.png')
 fig2.savefig(image_path)
 
+from scipy.signal import find_peaks
+peaks, _ = find_peaks(C)
+print("there is" + str(len(peaks)) + "peaks, at:" + str(peaks))
